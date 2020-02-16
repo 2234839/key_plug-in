@@ -13,13 +13,15 @@
 例如
 
 ```bash
-GET http:127.0.0.1/|mouse_left_click:10:10|sleep:1000|mouse_right_click:100:100
+GET http:127.0.0.1:9093/|mouse_left_click:10:10|sleep:1000|mouse_right_click:100:100
 -------------------|___指令名________:参数:参数
 ```
 
 上面的命令会在 10,10 的位置用左键点击一次 然后休息 1s 再在 100,100 的位置用右键单击一次
 
 ## 可用的指令
+
+[键值表](#键值表)
 
 击键一次
 
@@ -45,7 +47,18 @@ GET http:127.0.0.1/|mouse_left_click:10:10|sleep:1000|mouse_right_click:100:100
 
 > sleep:毫秒数(数值型)
 
+### 一些比较有用的例子
+
+```txt
+ctrl+a => http://127.0.0.1:9093/|key_down:17|key_press:65|key_up:17
+ctrl+c => http://127.0.0.1:9093/|key_down:17|key_press:65|key_up:67
+ctrl+v => http://127.0.0.1:9093/|key_down:17|key_press:65|key_up:86
+
+```
+
 ### 键值表
+
+> **16 进制的值记得要转 10 进制的值再使用**
 
 ```c#
     public const byte vKeyLButton = 0x1;    // 鼠标左键

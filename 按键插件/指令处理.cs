@@ -9,6 +9,7 @@ namespace 按键插件 {
             string fun_name = info[0];
             /** 键盘类 */
             if (fun_name == "key_press") {
+
                 byte keyName = byte.Parse (info[1]);
                 KeyBoard.keyPress (keyName);
             } else if (fun_name == "key_down") {
