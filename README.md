@@ -50,9 +50,9 @@ GET http:127.0.0.1:9093/|mouse_left_click:10:10|sleep:1000|mouse_right_click:100
 ### 一些比较有用的例子
 
 ```txt
-ctrl+a => http://127.0.0.1:9093/|key_down:17|key_press:65|key_up:17
-ctrl+c => http://127.0.0.1:9093/|key_down:17|key_press:65|key_up:67
-ctrl+v => http://127.0.0.1:9093/|key_down:17|key_press:65|key_up:86
+全选 ctrl+a => http://127.0.0.1:9093/|key_down:17|key_press:65|key_up:17
+复制 ctrl+c => http://127.0.0.1:9093/|key_down:17|key_press:67|key_up:17
+粘贴 ctrl+v => http://127.0.0.1:9093/|key_down:17|key_press:86|key_up:17
 
 ```
 
